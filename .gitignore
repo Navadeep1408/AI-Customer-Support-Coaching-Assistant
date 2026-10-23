@@ -1,0 +1,48 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# Generated session logs
+backend/task3_customer_simulator_agent/logs/
+logs/
+archive/reference_copy_before_merge/task3_customer_simulator_agent/logs
+archive/reference_copy_before_merge/customer_simulator/logs
+vector_db/
+
+# Local assistant workspace (renamed from .kilo, never submitted)
+development-tool-backup/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Node / frontend dependencies
+node_modules/
+.next/
+
+# Build output: the React Support Console build (frontend/support_console_frontend/dist)
+# IS committed on purpose, so the FastAPI backend can serve the UI without a
+# build step. Every other `dist/` folder stays ignored.
+dist/
+!frontend/support_console_frontend/dist/
+!frontend/support_console_frontend/dist/**
+
+# Task 6 - local run artifacts
+uvicorn_out.log
+uvicorn_err.log
+vite_out.log
+pytest_out*.txt
+.pytest_cache/
+smoke_*.log
+uv[0-9]*_*.log
+_t6pytest_run.txt
+t6_final_pytest.txt
